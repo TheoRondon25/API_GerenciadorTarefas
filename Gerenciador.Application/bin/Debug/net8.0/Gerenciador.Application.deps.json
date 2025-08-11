@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Gerenciador.Application/1.0.0": {
+        "dependencies": {
+          "Gerenciador.Communication": "1.0.0"
+        },
+        "runtime": {
+          "Gerenciador.Application.dll": {}
+        }
+      },
+      "Gerenciador.Communication/1.0.0": {
+        "runtime": {
+          "Gerenciador.Communication.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Gerenciador.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Gerenciador.Communication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
