@@ -12,12 +12,10 @@ public class CreateTasksUseCase
 
         return new ResponseRegisteredTaskJson()
         {
+            // retornando apenas o necessario
             Id = new Random().Next(1, 1000), // Simula a geração de um ID único
             Nome = request.Nome,
-            Descricao = request.Descricao,
-            Prioridade = request.Prioridade,
-            DataLimite = request.DataLimite,
-            Status = request.Status
+            Descricao = request.Descricao           
         };
 
     }
