@@ -14,12 +14,16 @@ public class TaskController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public IActionResult RegisterTask([FromBody] RequestTaskJson request)
     {
-        var useCases = new CreateTasksUseCase();
+        try
+        {
+            var useCases = new CreateTasksUseCase();
+            var response = useCases.Execute(request);
 
-        var response = useCases.Execute(request);
-
-        return Created(string.Empty, response);
-        // melhorar questao de ver os enums e a data na hora da criaçao, e fazer um Id de autoincremento em ordem
+            return Created(string.Empty, response);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { erro = ex.Message });
+        }               
     }
-
 }
