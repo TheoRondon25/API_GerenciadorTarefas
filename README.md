@@ -19,8 +19,8 @@ Uma tarefa deve conter os seguintes campos:
 
 Endpoints previstos:
 - ✅ Criar uma tarefa (`POST /tasks`)
-- ⏳ Listar todas as tarefas (`GET /tasks`)
-- ⏳ Visualizar tarefa por ID (`GET /tasks/{id}`)
+- ✅ Listar todas as tarefas (`GET /tasks`)
+- ✅ Visualizar tarefa por ID (`GET /tasks/{id}`)
 - ⏳ Atualizar uma tarefa (`PUT /tasks/{id}`)
 - ⏳ Excluir uma tarefa (`DELETE /tasks/{id}`)
 
