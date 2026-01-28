@@ -1,6 +1,8 @@
-﻿using Gerenciador.Application.UseCases.GetAll;
+﻿using Gerenciador.Application.UseCases.Delete;
+using Gerenciador.Application.UseCases.GetAll;
 using Gerenciador.Application.UseCases.GetById;
 using Gerenciador.Application.UseCases.Register;
+using Gerenciador.Application.UseCases.Update;
 using Gerenciador.Communication.Requests;
 using Gerenciador.Communication.Responses;
 using Microsoft.AspNetCore.Http;
@@ -48,5 +50,31 @@ public class TaskController : ControllerBase
         var response = useCase.Execute(id);
 
         return Ok(response);        
+    }
+
+    [HttpPut]
+    [Route("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status400BadRequest)]
+    public IActionResult Update([FromRoute] int id, [FromBody] RequestTaskJson request)
+    {
+        var useCase = new UpdateTaskUseCase();
+
+        useCase.Execute(id, request);
+
+        return NoContent();
+    }
+
+    [HttpDelete]
+    [Route("{id}")]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType(typeof(ResponseErrorsJson), StatusCodes.Status404NotFound)]
+    public IActionResult Delete(int id)
+    {
+        var useCase = new DeleteTaskUseCase();
+
+        useCase.Execute(id);
+
+        return NoContent();
     }
 }
