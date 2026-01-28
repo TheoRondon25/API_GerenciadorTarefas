@@ -1,5 +1,18 @@
+# Visual Studio
 .vs/
-bin/
-obj/
 *.user
 *.suo
+
+# Build results
+**/bin/
+**/obj/
+
+# Rider
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
