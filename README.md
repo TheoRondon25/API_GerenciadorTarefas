@@ -21,8 +21,8 @@ Endpoints previstos:
 - ✅ Criar uma tarefa (`POST /tasks`)
 - ✅ Listar todas as tarefas (`GET /tasks`)
 - ✅ Visualizar tarefa por ID (`GET /tasks/{id}`)
-- ⏳ Atualizar uma tarefa (`PUT /tasks/{id}`)
-- ⏳ Excluir uma tarefa (`DELETE /tasks/{id}`)
+- ✅ Atualizar uma tarefa (`PUT /tasks/{id}`)
+- ✅ Excluir uma tarefa (`DELETE /tasks/{id}`)
 
 > Os endpoints irão retornar **status codes apropriados** para cada situação.
 
@@ -48,9 +48,44 @@ O projeto segue uma **arquitetura em camadas** para manter o código organizado 
 
 ---
 
+## ▶️ Como rodar o projeto
+
+### Pré-requisitos
+
+- .NET 8 SDK instalado  
+- Visual Studio 2022 ou VS Code  
+
+### Passos para execução
+
+1) Clone o repositório:
+```bash
+    git clone https://github.com/TheoRondon25/API_GerenciadorTarefas.git
+```
+
+2) Acesse a pasta do projeto:
+```bash
+    cd API_GerenciadorTarefas
+```
+3) Abra a solução no Visual Studio ou, se preferir, execute via terminal:
+```bash
+    dotnet restore  
+    dotnet run --project API_GerenciadorTarefas
+```
+4) A aplicação será iniciada e o Swagger ficará disponível em:
+```bash
+    https://localhost:xxxx/swagger
+```
+> A porta (`xxxx`) pode variar conforme sua configuração local.
+
+A partir do Swagger é possível testar todos os endpoints da API diretamente pelo navegador.
+
+
+---
+
 ## 📅 Status do Projeto
-🚧 **Em desenvolvimento** – Atualmente implementado apenas o **Create** (registro de tarefa).  
-As próximas etapas seguirão a mesma arquitetura.
+
+✅ **Finalizado** – Projeto finalizado com o objetivo de aprimoramento, onde possui apenas as chamadas dos endpoints (sem as regras de negócio) e a arquitetura de camadas.  
+Em breve farei mais projetos com toda a regra de negócio, evoluindo cada vez mais.
 
 ---
 
